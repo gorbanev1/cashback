@@ -15,11 +15,7 @@ function calculateCashback(specialCategoryPurchases, otherCategoryPurchases) {
         totalCashback: totalCashback > limit ? limit : totalCashback,
     };
 }
-// const cashback= calculateCashback(250000,700000);
-// console.log(cashback);
-// function handleClick(evt) {
-//     debugger;
-// }
+
 function handleSubmit(evt) {
     evt.preventDefault();
 
@@ -58,7 +54,8 @@ function handleSubmit(evt) {
 
 }
 const formEl = document.getElementById('cashback-form');
- formEl.onsubmit = handleSubmit;
+formEl.addEventListener('submit', handleSubmit);
+
 
 const specialAmountInputEl = document.getElementById('special-amount-input');
 const otherAmountInputEl = document.getElementById('other-amount-input');
@@ -71,3 +68,9 @@ const totalCashbackEl = document.getElementById(('total-cashback'));
 
 // calculateCashback();
 // formEl.onclick=handleClick;
+
+// const cashback= calculateCashback(250000,700000);
+// console.log(cashback);
+// function handleClick(evt) {
+//     debugger;
+// }
